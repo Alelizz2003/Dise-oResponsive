@@ -1,0 +1,231 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 24px;
+    border-bottom: 1px solid rgb(206, 200, 200);
+    margin-bottom: 15px;
+}
+
+.menu{
+    display: none;
+}
+
+.logo{
+    width: 150px;
+}
+
+.navbar-left ul,
+.navbar-right ul{
+    padding: 0;
+    margin:12px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-left{
+    display: flex;
+}
+
+.navbar-left ul{
+    margin-left: 12px;
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a{
+    color: #000;
+    padding: 8px;
+}
+.main-container{
+    margin-bottom: 50px;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,240px); /* 2 es la cantidad de columnas y el 1fr el tamaño de cada una , autofiil es que se va a llenar de la cantidad que quepa*/
+    gap: 26px;
+    place-content: center;
+}
+
+.product-card{
+    width: 240px; 
+}
+
+.product-card img{
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover; /* para que la imagen no se vea estirada*/
+}
+
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.product-info figure {
+   margin: 0;
+}
+
+.product-info figure img{
+    width: 35px;
+    height: 35px;
+}
+
+.product-info div p:nth-child(1){
+    font-weight: bold;
+    font-size:medium;
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+
+.product-info div p:nth-child(2){
+    font-size:medium;
+    margin-top: 0;
+    margin-bottom: 0;
+
+
+}
+
+.add-to-cart {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    fill: #4CAF50;
+}
+
+.add-to-cart:hover {
+    fill: #45a049;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cart-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-title svg{
+    width: 70px;
+    height: 20px;
+    font-size: 240px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+p {
+    font-size: 18px;
+    color: hsl(0, 3%, 8%);
+}
+
+
+@media (max-width: 640px){
+
+    
+    .cards-container{
+        grid-template-columns: repeat(auto-fill,140px ) ; /*Esto se usa para crear nuestras columnas*/
+    }
+
+    .product-card{
+        width: 140px;
+    }
+    
+    .product-card img{
+        width: 140px;
+        height: 140px;
+    
+    }
+
+    .cart-title svg{
+        text-align: center;
+        margin-bottom: 20px;
+        width: 30px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    .cart-title{
+        text-align: center;
+        padding: 5px;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .navbar-left ul{
+        display: none;
+    }
+
+    .navbar-email {
+        display: none;
+    }
+}
+    
